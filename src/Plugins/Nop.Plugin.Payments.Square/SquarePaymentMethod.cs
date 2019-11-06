@@ -698,18 +698,21 @@ namespace Nop.Plugin.Payments.Square
             _localizationService.AddOrUpdatePluginLocaleResource("Plugins.Payments.Square.Fields.UseSandbox.Hint", "Determine whether to use sandbox credentials.");
             _localizationService.AddOrUpdatePluginLocaleResource("Plugins.Payments.Square.Instructions", @"
                 <p>
-                    For plugin configuration follow these steps:<br />
+                    <em><b>Warning: Square sandbox data has been changed. For more information visit our <a href=""https://docs.nopcommerce.com/user-guide/configuring/settingup/payments/methods/square.html"" target=""_blank"">documentation</a>.</em></b><br />
+                    <br />
+                    For plugin configuration, follow these steps:<br />
                     <br />
                     1. You will need a Square Merchant account. If you don't already have one, you can sign up here: <a href=""http://squ.re/nopcommerce"" target=""_blank"">https://squareup.com/signup/</a><br />
                     <em>Important: Your merchant account must have at least one location with enabled credit card processing. Please refer to the Square customer support if you have any questions about how to set this up.</em><br />
-                    2. Sign in to your Square Developer Portal at <a href=""http://squ.re/nopcommerce1"" target=""_blank"">https://connect.squareup.com/apps</a>; use the same sign in credentials as your merchant account.<br />
-                    3. Click on '+New Application' and fill in the Application Name. This name is for you to recognize the application in the developer portal and is not used by the extension. Click 'Create Application' at the bottom of the page.<br />
-                    4. In the Square Developer admin go to 'Credentials' tab. Copy the Application ID and paste it into Application ID below.<br />
-                    5. In the Square Developer admin go to 'OAuth' tab. Click 'Show Secret'. Copy the Application Secret and paste it into Application Secret below. Click 'Save' on this page.<br />
-                    6. Copy this URL: <em>{0}</em>. Go to the Square Developer admin, go to 'OAuth' tab, and paste this URL into Redirect URL. Click 'Save'.<br />
-                    7. On this page click 'Obtain access token' below; the Access token field should populate. Click 'Save' below.<br />
-                    8. Choose the business location. Location is a required parameter for payment requests.<br />
-                    9. Fill in the remaining fields and save to complete the configuration.<br />
+                    2. Sign in to your Square Developer Portal at <a href=""http://squ.re/nopcommerce1"" target=""_blank"">https://connect.squareup.com/apps</a>; use the same login credentials as your merchant account.<br />
+                    3. Click on 'Create Your First Application' and fill in the Application Name. This name is for you to recognize the application in the developer portal and is not used by the extension. Click 'Create Application' at the bottom of the page.<br />
+                    4. In the Square Developer admin make sure the Application mode setting value is 'Production'.<br />
+                    5. In the Square Developer admin go to 'Credentials' tab. Copy the Application ID and paste it into Application ID below.<br />
+                    6. In the Square Developer admin go to 'OAuth' tab. Click 'Show Secret'. Copy the Application Secret and paste it into Application Secret below. Click 'Save' on this page.<br />
+                    7. Copy this URL: <em>{0}</em>. Go to the Square Developer admin, go to 'OAuth' tab, and paste this URL into Redirect URL. Click 'Save'.<br />
+                    8. On this page, click 'Obtain access token' below; the Access token field should populate. Click 'Save' below.<br />
+                    9. Choose the business location. Location is a required parameter for payment requests.<br />
+                    10. Fill in the remaining fields and click 'Save' to complete the configuration.<br />
                     <br />
                     <em>Note: The payment form must be generated only on a webpage that uses HTTPS.</em><br />
                 </p>");
